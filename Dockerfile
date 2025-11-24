@@ -5,10 +5,10 @@ FROM r-base:latest
 RUN R -e "install.packages(c('tidyverse','ggplot2'), repos='https://cloud.r-project.org')"
 
 # Copier ton script R dans le container
-COPY ton_script.R /app/ton_script.R
+COPY NgueteuLine_23P314.R /app/NgueteuLine_23P314.R
 
 # Définir le dossier de travail
 WORKDIR /app
 
 # Commande pour exécuter ton script R au démarrage du service
-CMD ["Rscript", "ton_script.R"]
+CMD ["Rscript", "NgueteuLine_23P314.R"]
